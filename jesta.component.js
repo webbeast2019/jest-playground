@@ -1,7 +1,7 @@
 'use strict';
 let service;
-if(typeof module !== 'undefined') {
-   service = require('./jesta.service');
+if (typeof module !== 'undefined') {
+  service = require('./jesta.service');
 }
 
 const jestaTemplate = `
@@ -15,14 +15,14 @@ const jestaTemplate = `
 `;
 
 function initComponent(componentRoot) {
-    componentRoot.querySelector('.get-jesta-btn').onclick = function () {
-        const txt = (service) ?  service.getRandomJesta() : getRandomJesta();
-        componentRoot.querySelector('.jesta-display').innerHTML = txt;
-        return txt;
-    }
+  componentRoot.querySelector('.get-jesta-btn').onclick = function () {
+    const txt = (service) ? service.getRandomJesta() : getRandomJesta();
+    componentRoot.querySelector('.jesta-display').innerHTML = txt;
+    return txt;
+  }
 }
 
-if(typeof module !== 'undefined') {
-    module.exports.jestaTemplate = jestaTemplate;
-    module.exports.initComponent = initComponent;
+if (typeof module !== 'undefined') {
+  module.exports.jestaTemplate = jestaTemplate;
+  module.exports.initComponent = initComponent;
 }
