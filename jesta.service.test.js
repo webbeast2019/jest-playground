@@ -18,12 +18,12 @@ test('getRandomLongJesta should return string of minimum length', () => {
 
   expect(value).toBeDefined();
   expect(typeof value).toMatch('string');
-  expect(value.length).toBeGreaterThan(minLength);
+  expect(value.length).toBeGreaterThan(minLength - 1);
 });
 
 test('getRandomShortJesta should return string of maximum length', () => {
   const maxLength = Math.floor(Math.random() * 20 + 20);
-  const value = service.getRandomShortJesta(maxLength);
+  const value = service.getRandomShortJesta(maxLength + 1);
 
   expect(value).toBeDefined();
   expect(typeof value).toMatch('string');

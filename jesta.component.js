@@ -14,9 +14,18 @@ const jestaTemplate = `
 </div>
 `;
 
-function initComponent(componentRoot) {
+function initComponent(componentRoot, contains) {
+  componentRoot.innerHTML = jestaTemplate;
+
   componentRoot.querySelector('.get-jesta-btn').onclick = function () {
-    const txt = (service) ? service.getRandomJesta() : getRandomJesta();
+    let txt;
+
+    if(contains) {
+      txt = (service) ? service.getJestaContains(contains) : getJestaContains(contains);
+    } else {
+      txt = (service) ? service.getRandomJesta() : getRandomJesta();
+    }
+
     componentRoot.querySelector('.jesta-display').innerHTML = txt;
     return txt;
   }
