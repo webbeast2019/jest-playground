@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jesta Maker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="jesta.service.js"></script>
+    <script src="jesta.component.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script>
+    const rootElement = document.getElementById('root');
+    rootElement.innerHTML = jestaTemplate;
+    initComponent(rootElement);
+
+    // document.getElementById('get-jesta-btn').onclick = function() {
+    //     jestaDisplay.innerText = getRandomJesta();
+    // }
+</script>
+</body>
+</html>
