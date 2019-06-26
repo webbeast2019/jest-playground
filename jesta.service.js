@@ -22,7 +22,9 @@ const jestaCollection = [
 
 
 function getRandomJesta() {
-    return 'asd';
+    const rand1 = Math.floor(Math.random() * jestaStarter.length);
+    const rand2 = Math.floor(Math.random() * jestaCollection.length);
+    return `${jestaStarter[rand1]}, ${jestaCollection[rand2]}`;
 }
 
 function getRandomLongJesta(min) {}
